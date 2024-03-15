@@ -6,17 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- ****** BACKGROUND BUTTON ***** -->
+
+
+    <!-- ****** INTERFACE ***** -->
+
+
+
+
 
 
     <TextView
         android:id="@+id/GreenBG"
         android:layout_width="match_parent"
-        android:layout_height="505dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/green_background"/>
+        android:layout_height="605dp"
+        android:background="@drawable/green_background" />
 
-    <!-- ****** LABEL ***** -->
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/Logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        />
 
     <TextView
         android:id="@+id/TextLabel"
@@ -24,10 +36,11 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="serif"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="10dp"
         android:text="Welcome"
         android:textColor="@color/MainWhite"
-        android:textSize="60dp" />
+        android:textSize="60dp"
+        android:layout_below="@id/Logo"/>
 
     <!-- ****** LOGIN BUTTON ****** -->
 
@@ -37,9 +50,10 @@
         android:layout_height="45dp"
         android:onClick="LoginBtn"
         android:text="Login"
+        android:layout_below="@id/GreenBG"
         android:layout_centerHorizontal="true"
         android:background="@drawable/main_button"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="40dp"
         />
 
     <!-- ****** REGISTER BUTTON ***** -->
@@ -55,6 +69,21 @@
         android:background="@drawable/main_button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp" />
+
+    <!-- ****** ADMIN BUTTON ***** -->
+
+    <Button
+        android:id="@+id/AdminButton"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/RegisterButton"
+        android:onClick="RegisBtn"
+        android:text="Administrator"
+        android:elevation="20dp"
+        android:background="@drawable/main_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"/>
 
 
 </RelativeLayout>

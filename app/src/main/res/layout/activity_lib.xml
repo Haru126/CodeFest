@@ -53,7 +53,7 @@ tools:context=".lib">
     android:layout_below="@+id/Search"
     android:layout_width="match_parent"
     android:layout_marginTop="20dp"
-    android:layout_height="600dp">
+    android:layout_height="720dp">
 
     <GridLayout
         android:layout_width="match_parent"

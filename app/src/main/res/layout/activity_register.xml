@@ -98,7 +98,7 @@
         android:id="@+id/LoginButton"
         android:layout_width="300dp"
         android:layout_height="45dp"
-        android:onClick="ConfirmLoginBtn"
+        android:onClick="ConfirmRegisterBtn"
         android:text="Confirm"
         android:elevation="20dp"
         android:background="@drawable/class_button"

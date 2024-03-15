@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "307296473992",
+    "firebase_url": "https://codefest-dc2f5-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "codefest-dc2f5",
+    "storage_bucket": "codefest-dc2f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307296473992:android:60d8296aa90bcf9e47203d",
+        "android_client_info": {
+          "package_name": "com.example.codefest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW_T0DUYEfc1BuHuN-qLLXGE86mE1m-Ns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

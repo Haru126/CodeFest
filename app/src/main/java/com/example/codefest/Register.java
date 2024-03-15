@@ -1,60 +1,63 @@
 package com.example.codefest;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class Register extends AppCompatActivity {
 
+    private FirebaseAuth mAuth;
     functions func = new functions();
-
     Model user = new Model();
     private EditText confirmPass;
     private EditText passInput;
     private EditText emailInput;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-
-        confirmPass = findViewById(R.id.ConfirmPass);
+        mAuth = FirebaseAuth.getInstance();
+        confirmPass = findViewById(R.id.RetypePassword);
         passInput = findViewById(R.id.Password);
         emailInput = findViewById(R.id.EmailInput);
 
 
     }
-
-    public void ConfirmBtn(View v){
+    public void ConfirmRegisterBtn(View v) {
         String passMain = passInput.getText().toString();
         String passConf = confirmPass.getText().toString();
         String email = emailInput.getText().toString();
 
-        if(email.contains("@")){
-            if(passMain.equals(passConf) && !passMain.isEmpty()){
-                user.setEmail(email);
-                user.setPassword(passMain);
+        mAuth.createUserWithEmailAndPassword(email, passMain)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
 
-                //handle code before exiting
-                func.toa(this, "SuccessFully Registered");
-                startActivity(new Intent(this, Login.class));
+                            Log.d("Auth", "createUserWithEmail:success");
+                        } else {
 
-
-            } else {
-                func.toa(this, "Password Does Not Match");
-            }
-        } else {
-            func.toa(this, "Invalid Email");
-        }
-
+                            Log.w("Auth", "createUserWithEmail:failure", task.getException());
+                            Toast.makeText(Register.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
+
 
 }

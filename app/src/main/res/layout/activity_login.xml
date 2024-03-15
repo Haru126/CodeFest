@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/green_background"/>
 
-    <!-- ****** LABEL ***** -->
+    <!-- ****** LABEL ****** -->
 
     <TextView
         android:id="@+id/TextLabel"

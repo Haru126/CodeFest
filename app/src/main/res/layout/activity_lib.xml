@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".lib">
+
+<!-- ****** BACKGROUND ***** -->
+
+<TextView
+    android:id="@+id/GreenBG"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/green_background"/>
+
+<!-- ****** LABEL ****** -->
+
+<TextView
+    android:id="@+id/TextLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/MainWhite"
+    android:layout_marginTop="15dp"
+    android:textSize="25dp"
+    android:text="Online Library"
+    android:fontFamily="serif"
+    android:layout_centerHorizontal="true" />
+
+<!-- ****** SEARCH ***** -->
+
+
+<EditText
+    android:id="@+id/Search"
+    android:layout_width="300dp"
+    android:layout_height="40dp"
+    android:elevation="10dp"
+    android:paddingHorizontal="15dp"
+    android:drawableLeft="@drawable/magnifying_glass_icon"
+    android:drawablePadding="5dp"
+    android:layout_below="@+id/GreenBG"
+    android:textSize="15dp"
+    android:hint="Enter Title"
+    android:background="@drawable/inputbackground"
+    android:ems="10"
+    android:layout_marginTop="20dp"
+    android:layout_centerHorizontal="true"
+    android:inputType="textEmailAddress" />
+
+<!-- ****** BOOKS ***** -->
+
+
+<ScrollView
+    android:layout_below="@+id/Search"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_height="600dp">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:rowCount="8"
+        android:columnCount="3"
+        android:useDefaultMargins="true"
+
+        >
+
+        <!-- ****** ROW 1 BOOKS ***** -->
+
+        <ImageView
+            android:id="@+id/Book1"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:background="@drawable/learn_c_in_one_day_and_learn_it_well"
+            android:ems="10"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:inputType="textEmailAddress" />
+
+        <ImageView
+            android:id="@+id/Book2"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:background="@drawable/computer_system"
+            android:ems="10"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:padding="20dp"
+            android:inputType="textEmailAddress" />
+
+
+        <ImageView
+            android:id="@+id/Book3"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/three"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+        <!-- ****** ROW 2 BOOKS ***** -->
+
+        <ImageView
+            android:id="@+id/Book4"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/four"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+        <ImageView
+            android:id="@+id/Book5"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/five"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+
+        <ImageView
+            android:id="@+id/Book6"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/six"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+
+        <!-- ****** ROW 3 BOOKS ***** -->
+
+
+        <ImageView
+            android:id="@+id/Book7"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/six"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+
+        <ImageView
+            android:id="@+id/Book8"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/seven"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+
+
+        <ImageView
+            android:id="@+id/Book9"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/eight"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+
+        <!-- ****** ROW 4 BOOKS ***** -->
+
+        <ImageView
+            android:id="@+id/Book10"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fifthteen"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+        <ImageView
+            android:id="@+id/Book11"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fifthteen"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+
+        <ImageView
+            android:id="@+id/Book12"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fifthteen"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+
+
+        <!-- ****** ROW 5 BOOKS ***** -->
+
+        <ImageView
+            android:id="@+id/Book13"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="5"
+            android:layout_column="2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fifthteen"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+
+        <!-- ****** ROW 6 BOOKS ***** -->
+
+        <ImageView
+            android:id="@+id/Boo14"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="6"
+            android:layout_column="2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fifthteen"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+
+        <!-- ****** ROW 7 BOOKS ***** -->
+
+        <ImageView
+            android:id="@+id/Book15"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:layout_row="7"
+            android:layout_column="2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fifthteen"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
+
+
+
+    </GridLayout>
+
+
+</ScrollView>
+
+
+</RelativeLayout>

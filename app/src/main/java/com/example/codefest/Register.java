@@ -20,7 +20,6 @@ public class Register extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     functions func = new functions();
-    Model user = new Model();
     private EditText confirmPass;
     private EditText passInput;
     private EditText emailInput;
@@ -42,7 +41,7 @@ public class Register extends AppCompatActivity {
         String passConf = confirmPass.getText().toString();
         String email = emailInput.getText().toString();
 
-        if(passMain.equals(passConf)){
+        if(passMain.equals(passConf) && !passMain.isEmpty()){
             mAuth.createUserWithEmailAndPassword(email, passMain)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -54,13 +53,15 @@ public class Register extends AppCompatActivity {
                             } else {
 
                                 Log.w("Auth", "createUserWithEmail:failure", task.getException());
-                                Toast.makeText(Register.this, "Registration failed failed.",
-                                        Toast.LENGTH_SHORT).show();
+                                func.toa(Register.this, "Registration failed.");
                             }
                         }
                     });
-        } else {
-            Toast.makeText(this, "Password doesn't match", Toast.LENGTH_SHORT);
+        } else if(passMain.isEmpty() && passConf.isEmpty() && email.isEmpty()){
+            func.toa(Register.this, "Don't leave prompts empty");
+        }
+        else {
+            func.toa(Register.this, "Password doesn't match.");
         }
     }
 

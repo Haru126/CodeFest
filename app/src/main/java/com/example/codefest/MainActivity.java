@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void AdminBtn(View v){
-
+        startActivity(new Intent(this, admin.class));
     }
 
 

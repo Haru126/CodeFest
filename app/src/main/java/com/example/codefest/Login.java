@@ -21,16 +21,8 @@ public class Login extends AppCompatActivity {
 
 
     private FirebaseAuth mAuth;
-// ...
-// Initialize Firebase Auth
-
-    Model user = new Model();
     private EditText EmailInput;
     private EditText PasswordInput;
-
-    private String tempEmail;
-    private String tempPass;
-
     FirebaseDatabase database;
 
     @Override

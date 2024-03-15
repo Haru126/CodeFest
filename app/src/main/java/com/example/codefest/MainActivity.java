@@ -19,17 +19,14 @@ public class MainActivity extends AppCompatActivity {
 
         Login = findViewById(R.id.LoginButton);
         Register = findViewById(R.id.RegisterButton);
-
     }
 
     public void LoginBtn(View v){
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
+        startActivity(new Intent(this, Login.class));
     }
 
     public void RegisBtn(View v){
-        Intent intent = new Intent(this, Register.class);
-        startActivity(intent);
+        startActivity(new Intent(this, Register.class));
     }
 
 

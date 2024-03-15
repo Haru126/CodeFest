@@ -68,20 +68,20 @@ tools:context=".lib">
 
         <!-- ****** ROW 1 BOOKS ***** -->
 
+
         <ImageView
             android:id="@+id/Book1"
             android:layout_width="90dp"
             android:layout_height="120dp"
-            android:background="@drawable/learn_c_in_one_day_and_learn_it_well"
-            android:ems="10"
-            android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"
             android:layout_row="1"
             android:layout_column="0"
+            android:layout_centerHorizontal="true"
             android:layout_margin="20dp"
-            android:padding="20dp"
-            android:inputType="textEmailAddress" />
-
+            android:layout_marginTop="20dp"
+            android:background="@drawable/learn_c_in_one_day_and_learn_it_well"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="20dp" />
 
         <ImageView
             android:id="@+id/Book2"

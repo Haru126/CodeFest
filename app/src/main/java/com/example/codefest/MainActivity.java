@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, Register.class));
     }
 
+    public void AdminBtn(View v){
+
+    }
+
 
 
 

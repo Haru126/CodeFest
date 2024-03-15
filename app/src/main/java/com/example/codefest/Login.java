@@ -49,22 +49,28 @@ public class Login extends AppCompatActivity {
         Email = EmailInput.getText().toString();
         Pass = PasswordInput.getText().toString();
 
-        mAuth.signInWithEmailAndPassword(Email, Pass)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
+        if(!Email.isEmpty() && !Pass.isEmpty()){
+            mAuth.signInWithEmailAndPassword(Email, Pass)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
 
-                            Log.d("Auth", "signInWithEmail:success");
-                            Toast.makeText(Login.this, "Authentication Success.",
-                                    Toast.LENGTH_SHORT).show();
-                        } else {
+                                Log.d("Auth", "signInWithEmail:success");
+                                startActivity(new Intent(Login.this, lib.class));
+                                Toast.makeText(Login.this, "Authentication Success.",
+                                        Toast.LENGTH_SHORT).show();
+                            } else {
 
-                            Log.w("Auth", "signInWithEmail:failure", task.getException());
-                            Toast.makeText(Login.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                                Log.w("Auth", "signInWithEmail:failure", task.getException());
+                                Toast.makeText(Login.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-                });
+                    });
+        } else {
+            Toast.makeText(this, "Email or Password Incorrect", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

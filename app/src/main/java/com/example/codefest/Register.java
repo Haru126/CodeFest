@@ -42,21 +42,26 @@ public class Register extends AppCompatActivity {
         String passConf = confirmPass.getText().toString();
         String email = emailInput.getText().toString();
 
-        mAuth.createUserWithEmailAndPassword(email, passMain)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
+        if(passMain.equals(passConf)){
+            mAuth.createUserWithEmailAndPassword(email, passMain)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
 
-                            Log.d("Auth", "createUserWithEmail:success");
-                        } else {
+                                Log.d("Auth", "createUserWithEmail:success");
+                                startActivity(new Intent(Register.this, Login.class));
+                            } else {
 
-                            Log.w("Auth", "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(Register.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                                Log.w("Auth", "createUserWithEmail:failure", task.getException());
+                                Toast.makeText(Register.this, "Registration failed failed.",
+                                        Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-                });
+                    });
+        } else {
+            Toast.makeText(this, "Password doesn't match", Toast.LENGTH_SHORT);
+        }
     }
 
 
